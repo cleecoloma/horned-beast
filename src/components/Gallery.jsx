@@ -3,7 +3,7 @@ import HornedBeast from './HornedBeast';
 
 class Gallery extends React.Component {
   render() {
-    let pictures = [
+    let data = [
       {
         _id: 1,
         image_url:
@@ -36,7 +36,9 @@ class Gallery extends React.Component {
     ];
     return (
       <div>
-        <HornedBeast title="" image_url="" keyword="" description="" />
+        {data.map((item, _id) => 
+          <HornedBeast key={_id} title={item.title} image_url={item.image_url} keyword={item.keyword} description={item.description} />
+        )}
       </div>
     );
   }
