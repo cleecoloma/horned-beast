@@ -1,7 +1,13 @@
+import Header from './components/Header';
+import Gallery from './components/Gallery';
+import Footer from './components/Footer';
+
 function App() {
   return (
     <div>
-      <p>Hello World!</p>
+      <Header />
+      <Gallery />
+      <Footer />
     </div>
   )
 }
