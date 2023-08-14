@@ -1,13 +1,15 @@
 import React from 'react';
 
 class HornedBeast extends React.Component {
-
-}
-
-render() {
-  return (
-    <h1>Horned Beast</h1>
-  )
+  render() {
+    return (
+      <div>
+        <h2>Horned Beast</h2>
+        <img src='' alt='' title=''></img>
+        <p></p>
+      </div>
+    );
+  }
 }
 
 export default HornedBeast;
