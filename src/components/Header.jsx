@@ -1,11 +1,12 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
 
 class Header extends React.Component {
   render() {
     return (
-      <div>
+      <Navbar>
         <h1>Horned Beast</h1>
-      </div>
+      </Navbar>
     );
   }
 }

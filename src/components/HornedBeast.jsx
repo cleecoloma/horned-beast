@@ -14,16 +14,19 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem', margin: '2rem', display: 'inline-block' }}>
         <Card.Img
           variant="top"
+          style={{ height: '15rem', objectFit: 'contain' }}
           src={this.props.image_url}
           alt={this.props.keyword}
           title={this.props.title}
         />
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
+          <Card.Text style={{ height: '5rem' }}>
+            {this.props.description}
+          </Card.Text>
           <Card.Text>
             <HeartFill /> {this.state.favoriteCount}
           </Card.Text>
