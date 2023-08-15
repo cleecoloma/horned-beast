@@ -13,7 +13,6 @@ class Header extends React.Component {
   render() {
     return (
       <Navbar
-        // className="bg-body-tertiary"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -23,7 +22,7 @@ class Header extends React.Component {
       >
         <h1>Horned Beast</h1>
         <div>
-          <p>Click Icon Below for Light/Dark Mode</p>
+          <p>Click icon below to change header background bolor</p>
           <CircleHalf style={{ fontSize: '250%' }} onClick={this.handleClick}/>
         </div>
       </Navbar>
