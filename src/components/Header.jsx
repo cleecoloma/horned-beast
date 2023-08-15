@@ -5,19 +5,20 @@ import { CircleHalf } from 'react-bootstrap-icons';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { favoriteCount: 0 };
+    this.state = { isClicked: true };
   }
   handleClick = () => {
-    this.setState({ favoriteCount: this.state.favoriteCount + 1 });
+    this.setState({ isClicked: !this.state.isClicked });
   };
   render() {
     return (
       <Navbar
-        className="bg-body-tertiary"
+        // className="bg-body-tertiary"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
           padding: '1rem',
+          backgroundColor: this.state.isClicked ? 'lightsalmon' : 'lightgray',
         }}
       >
         <h1>Horned Beast</h1>
