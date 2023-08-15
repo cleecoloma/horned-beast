@@ -46,6 +46,14 @@ Any environment configuration steps.
 
 ## Change Log
 
+| Class 02 | Feature |
+| --- | --- |
+| | Number and name of feature: Images/Favorite/Bootstrap |
+| | Estimate of time needed to complete: 3 hours |
+| | Start time: 12:30pm |
+| | Finish time: 2:30pm |
+| | Actual time needed to complete: 2 hours |
+
 ## Collaborators
 
 List collaborators here.
