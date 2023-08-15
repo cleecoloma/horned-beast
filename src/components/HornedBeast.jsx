@@ -6,18 +6,30 @@ import { HeartFill } from 'react-bootstrap-icons';
 class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { favoriteCount: 0, };
+    this.state = { favoriteCount: 0 };
   }
   handleClick = () => {
-    this.setState({favoriteCount: this.state.favoriteCount+1});
-  }
+    this.setState({ favoriteCount: this.state.favoriteCount + 1 });
+  };
 
   render() {
     return (
-      <Card style={{ width: '18rem', margin: '2rem', display: 'inline-block' }}>
+      <Card
+        style={{
+          width: '18rem',
+          margin: '2rem',
+          display: 'inline-block',
+          boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+        }}
+      >
         <Card.Img
           variant="top"
-          style={{ height: '15rem', objectFit: 'contain' }}
+          onClick={this.handleClick}
+          style={{
+            height: '15rem',
+            objectFit: 'contain',
+            backgroundColor: '#F1F0E8',
+          }}
           src={this.props.image_url}
           alt={this.props.keyword}
           title={this.props.title}
@@ -30,9 +42,9 @@ class HornedBeast extends React.Component {
           <Card.Text>
             <HeartFill /> {this.state.favoriteCount}
           </Card.Text>
-          <Button variant="primary" onClick={this.handleClick}>
+          {/* <Button variant="primary" onClick={this.handleClick}>
             Favorite
-          </Button>
+          </Button> */}
         </Card.Body>
       </Card>
     );
