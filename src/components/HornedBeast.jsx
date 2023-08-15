@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { HeartFill } from 'react-bootstrap-icons';
 
@@ -42,9 +41,6 @@ class HornedBeast extends React.Component {
           <Card.Text>
             <HeartFill /> {this.state.favoriteCount}
           </Card.Text>
-          {/* <Button variant="primary" onClick={this.handleClick}>
-            Favorite
-          </Button> */}
         </Card.Body>
       </Card>
     );
