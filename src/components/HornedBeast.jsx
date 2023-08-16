@@ -11,9 +11,9 @@ class HornedBeast extends React.Component {
   handleClick = () => {
     this.setState({ favoriteCount: this.state.favoriteCount + 1 });
   };
-  isClicked = () => {
-    this.setState({ preview: !this.props.preview });
-  }
+  // isClicked = () => {
+  //   this.setState({ preview: !this.props.preview });
+  // }
 
   render() {
     return (
@@ -35,7 +35,7 @@ class HornedBeast extends React.Component {
           src={this.props.image_url}
           alt={this.props.keyword}
           title={this.props.title}
-          onClick={this.isClicked}
+          onClick={this.props.clickMe2}
         />
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>

@@ -23,8 +23,7 @@ class Gallery extends React.Component {
             image_url={item.image_url}
             keyword={item.keyword}
             description={item.description}
-            preview={this.props.preview}
-            onClick={this.handleClick}
+            clickMe2={this.props.clickMe}
           />
         ))}
       </div>

@@ -7,19 +7,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import hornedBeastData from './assets/data.json';
 import SelectedBeast from './components/SelectedBeast';
 
-function App() {
-  this.state = {
-    
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { preview: false }
   }
-  
-  return (
-    <>
-      <Header />
-      <Gallery preview={this.preview} handleData={hornedBeastData} />
-      <SelectedBeast />
-      <Footer />
-    </>
-  );
+
+  toggleModal = () => {
+    this.setState({ preview: !this.state.preview })
+  }
+
+  render() {
+    return (
+      <>
+        <Header />
+        <Gallery clickMe={this.toggleModal} handleData={hornedBeastData} />
+        <SelectedBeast preview={this.state.preview} toggleModal={this.toggleModal} />
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default App;
