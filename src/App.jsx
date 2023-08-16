@@ -10,11 +10,19 @@ import SelectedBeast from './components/SelectedBeast';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { preview: false, selectedCardIndex: null }
+    this.state = { preview: false, 
+      selectedTitle: null,
+      selectedDescription: null,
+      selectedImage: null, 
+    }
   }
 
-  toggleModal = () => {
-    this.setState({ preview: !this.state.preview })
+  toggleModal = (title, description, image) => {
+    console.log(title, description, image)
+    this.setState({ selectedTitle: title});
+    this.setState({ selectedDescription: description });
+    this.setState({ selectedImage: image });
+    this.setState({ preview: !this.state.preview });
   }
 
   render() {
@@ -22,7 +30,13 @@ class App extends React.Component {
       <>
         <Header />
         <Gallery clickMe={this.toggleModal} handleData={hornedBeastData} />
-        <SelectedBeast preview={this.state.preview} toggleModal={this.toggleModal} />
+        <SelectedBeast
+          title={this.state.selectedTitle}
+          description={this.state.selectedDescription}
+          img={this.state.selectedImage}
+          preview={this.state.preview}
+          toggleModal={this.toggleModal}
+        />
         <Footer />
       </>
     );

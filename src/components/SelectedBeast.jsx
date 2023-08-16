@@ -1,17 +1,26 @@
-import React from "react";
-import { Modal, Button } from "react-bootstrap";
-import HornedBeast from "./HornedBeast";
+import React from 'react';
+import { Modal, Button } from 'react-bootstrap';
+// import HornedBeast from "./HornedBeast";
 
 class SelectedBeast extends React.Component {
+  constructor(props) {
+    // console.log(props)
+    super(props);
+  }
+
   render() {
     return (
       <Modal show={this.props.preview} onHide={this.props.toggleModal}>
-        <Modal.Header closeButton>HornedBeast Name</Modal.Header>
-        <Modal.Body>HornedBeast Image</Modal.Body>
-        <Modal.Body>HornedBeast Description</Modal.Body>
-        <Modal.Body>HornedBeast Favorites</Modal.Body>
+        <Modal.Header closeButton>{this.props.title}</Modal.Header>
+        <Modal.Body style={{ width: '500px' }}>
+          <img src={this.props.img} style={{ width: '100%' }} />
+        </Modal.Body>
+        <Modal.Body>{this.props.description}</Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={this.props.toggleModal}>
+          <Button
+            variant="primary"
+            onClick={(e) => this.props.toggleModal(null, null, null)}
+          >
             Close
           </Button>
         </Modal.Footer>
