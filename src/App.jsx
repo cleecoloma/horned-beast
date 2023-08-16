@@ -8,14 +8,14 @@ import hornedBeastData from './assets/data.json';
 import SelectedBeast from './components/SelectedBeast';
 
 function App() {
-  let toggle = false;
-  let preview = () => {
-    this.setState({ toggle: !toggle });
-  };
+  this.state = {
+    
+  }
+  
   return (
     <>
       <Header />
-      <Gallery isPreview={preview} handleData={hornedBeastData} />
+      <Gallery preview={this.preview} handleData={hornedBeastData} />
       <SelectedBeast />
       <Footer />
     </>
