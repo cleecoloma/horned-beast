@@ -47,7 +47,7 @@ Any environment configuration steps.
 ## Change Log
 
 ### Class 02 Lab
-1. Features 
+1. Feature(s)
     * Images
     * Favorite
     * Bootstrap
@@ -55,6 +55,14 @@ Any environment configuration steps.
 3. Start time: **12:30pm**
 4. Finish time: **2:30pm**
 5. Actual time needed to complete: **2 hours**
+
+### Class 03 Lab
+1. Feature(s) 
+    * Modal
+2. Estimate of time needed to complete: **2 hours**
+3. Start time: **12:30pm**
+4. Finish time: **5:00pm**
+5. Actual time needed to complete: **4.5 hours**
 
 ## Collaborators
 
