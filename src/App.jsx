@@ -10,19 +10,21 @@ import SelectedBeast from './components/SelectedBeast';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { preview: false, 
+    this.state = {
+      preview: false,
       selectedTitle: null,
       selectedDescription: null,
-      selectedImage: null, 
-    }
+      selectedImage: null,
+      selectedFavorites: null,
+    };
   }
 
-  toggleModal = (title, description, image) => {
-    console.log(title, description, image)
+  toggleModal = (title, description, img, favorites) => {
+    this.setState({ preview: !this.state.preview });
     this.setState({ selectedTitle: title});
     this.setState({ selectedDescription: description });
-    this.setState({ selectedImage: image });
-    this.setState({ preview: !this.state.preview });
+    this.setState({ selectedImage: img });
+    this.setState({ selectedFavorites: favorites });
   }
 
   render() {
@@ -34,6 +36,7 @@ class App extends React.Component {
           title={this.state.selectedTitle}
           description={this.state.selectedDescription}
           img={this.state.selectedImage}
+          favorites={this.state.selectedFavorites}
           preview={this.state.preview}
           toggleModal={this.toggleModal}
         />
