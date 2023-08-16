@@ -10,7 +10,7 @@ import SelectedBeast from './components/SelectedBeast';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { preview: false }
+    this.state = { preview: false, selectedCardIndex: null }
   }
 
   toggleModal = () => {

@@ -4,14 +4,7 @@ import HornedBeast from './HornedBeast';
 class Gallery extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   selected: false,
-    // };
   }
-
-  // handleClick = () => {
-  //   this.props.isPreview;
-  // }
 
   render() {
     return (
@@ -23,7 +16,7 @@ class Gallery extends React.Component {
             image_url={item.image_url}
             keyword={item.keyword}
             description={item.description}
-            clickMe2={this.props.clickMe}
+            clickMe={this.props.clickMe}
           />
         ))}
       </div>

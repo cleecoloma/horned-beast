@@ -35,7 +35,7 @@ class HornedBeast extends React.Component {
           src={this.props.image_url}
           alt={this.props.keyword}
           title={this.props.title}
-          onClick={this.props.clickMe2}
+          onClick={this.props.clickMe}
         />
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
