@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import data from '../assets/data.json';
+// import data from '../assets/data.json';
 
 class Gallery extends React.Component {
   render() {

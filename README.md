@@ -59,8 +59,8 @@ Any environment configuration steps.
 ### Class 03 Lab
 1. Feature(s) 
     * Modal
-2. Estimate of time needed to complete: **hours**
-3. Start time: **pm**
+2. Estimate of time needed to complete: **2 hours**
+3. Start time: **12:30pm**
 4. Finish time: **pm**
 5. Actual time needed to complete: **hours**
 
