@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import { HeartFill } from 'react-bootstrap-icons';
 
 class HornedBeast extends React.Component {
@@ -23,7 +24,6 @@ class HornedBeast extends React.Component {
       >
         <Card.Img
           variant="top"
-          onClick={this.handleClick}
           style={{
             height: '15rem',
             objectFit: 'contain',
@@ -41,6 +41,9 @@ class HornedBeast extends React.Component {
           <Card.Text>
             <HeartFill /> {this.state.favoriteCount}
           </Card.Text>
+          <Button variant="primary" onClick={this.handleClick}>
+            Favorite
+          </Button>
         </Card.Body>
       </Card>
     );
