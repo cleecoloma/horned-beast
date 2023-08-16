@@ -61,8 +61,8 @@ Any environment configuration steps.
     * Modal
 2. Estimate of time needed to complete: **2 hours**
 3. Start time: **12:30pm**
-4. Finish time: **pm**
-5. Actual time needed to complete: **hours**
+4. Finish time: **5:00pm**
+5. Actual time needed to complete: **4.5 hours**
 
 ## Collaborators
 

@@ -9,8 +9,16 @@ class SelectedBeast extends React.Component {
 
   render() {
     return (
-      <Modal show={this.props.preview} onHide={this.props.toggleModal}>
-        <Modal.Header style={{ fontSize: '150%', fontWeight: 'bold' }} closeButton>{this.props.title}</Modal.Header>
+      <Modal
+        show={this.props.preview}
+        onHide={this.props.toggleModal}
+      >
+        <Modal.Header
+          style={{ fontSize: '150%', fontWeight: 'bold' }}
+          closeButton
+        >
+          {this.props.title}
+        </Modal.Header>
         <Modal.Body style={{ width: '500px' }}>
           <img src={this.props.img} style={{ width: '100%' }} />
         </Modal.Body>

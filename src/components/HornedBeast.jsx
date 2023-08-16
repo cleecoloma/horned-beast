@@ -27,14 +27,20 @@ class HornedBeast extends React.Component {
           style={{
             height: '15rem',
             objectFit: 'contain',
-            backgroundColor: '#F1F0E8',
           }}
           src={this.props.image_url}
           alt={this.props.keyword}
           title={this.props.title}
-          onClick={() => this.props.clickMe(this.props.title, this.props.description, this.props.image_url, this.state.favoriteCount)}
+          onClick={() =>
+            this.props.clickMe(
+              this.props.title,
+              this.props.description,
+              this.props.image_url,
+              this.state.favoriteCount
+            )
+          }
         />
-        <Card.Body>
+        <Card.Body style={{ backgroundColor: '#F1F0E8' }}>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text style={{ height: '5rem' }}>
             {this.props.description}
