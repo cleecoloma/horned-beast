@@ -12,12 +12,13 @@ class Gallery extends React.Component {
       newData: this.props.handleData,
     };
   }
-
+  // filters the beast data json based on the number of horns that the user inputs
   filterData = () => {
     const updatedData = this.state.data.filter((beast) => beast.horns >= this.state.horns);
     this.setState({ newData : updatedData })
   }
 
+  // updates the value of horn in the state and then invokes filterData as a callback function
   updateHorn = (value) => {
     this.setState({ horns: value }, () => {
       this.filterData();
