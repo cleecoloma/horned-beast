@@ -54,7 +54,7 @@ class Gallery extends React.Component {
             }}
             controlId="formBasicEmail"
           >
-            <Form.Label>Search by Number of Horns</Form.Label>
+            <Form.Label style={{marginTop: '1rem'}}>Search by Number of Horns</Form.Label>
             <Form.Control
               type="number"
               placeholder="Enter Number Here"
