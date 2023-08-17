@@ -16,8 +16,8 @@ class App extends React.Component {
       selectedDescription: null,
       selectedImage: null,
       selectedFavorites: null,
-      whichColor: false,
-      lightMode: 'white',
+      whichColor: true,
+      lightMode: '#F1F0E8', //gray
       darkMode: 'black',
     };
   }
