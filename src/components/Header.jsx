@@ -5,11 +5,7 @@ import { CircleHalf } from 'react-bootstrap-icons';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isClicked: true };
   }
-  handleClick = () => {
-    this.setState({ isClicked: !this.state.isClicked });
-  };
   render() {
     return (
       <Navbar
@@ -17,13 +13,21 @@ class Header extends React.Component {
           display: 'flex',
           justifyContent: 'space-between',
           padding: '1rem',
-          backgroundColor: this.state.isClicked ? 'lightsalmon' : 'lightgray',
+          backgroundColor: this.props.whichColor
+            ? this.props.lightMode
+            : this.props.darkMode,
+          color: this.props.whichColor
+            ? this.props.darkMode
+            : this.props.lightMode,
         }}
       >
         <h1>Horned Beast</h1>
         <div>
-          <p>Click icon below to change header background bolor</p>
-          <CircleHalf style={{ fontSize: '250%' }} onClick={this.handleClick}/>
+          <p>Click icon below to change background color</p>
+          <CircleHalf
+            style={{ fontSize: '250%' }}
+            onClick={() => this.props.isColor()}
+          />
         </div>
       </Navbar>
     );

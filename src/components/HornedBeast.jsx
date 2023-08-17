@@ -26,7 +26,7 @@ class HornedBeast extends React.Component {
           variant="top"
           style={{
             height: '15rem',
-            objectFit: 'contain',
+            objectFit: 'cover',
           }}
           src={this.props.image_url}
           alt={this.props.keyword}

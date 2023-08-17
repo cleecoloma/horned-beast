@@ -16,8 +16,15 @@ class App extends React.Component {
       selectedDescription: null,
       selectedImage: null,
       selectedFavorites: null,
+      whichColor: false,
+      lightMode: 'white',
+      darkMode: 'black',
     };
   }
+
+  toggleColorMode = () => {
+    this.setState({ whichColor: !this.state.whichColor })
+  };
 
   toggleModal = (title, description, img, favorites) => {
     this.setState({ preview: !this.state.preview });
@@ -30,9 +37,22 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header />
-        <Gallery clickMe={this.toggleModal} handleData={hornedBeastData} />
+        <Header
+          whichColor={this.state.whichColor}
+          lightMode={this.state.lightMode}
+          darkMode={this.state.darkMode}
+          isColor={this.toggleColorMode}
+        />
+        <Gallery
+          whichColor={this.state.whichColor}
+          lightMode={this.state.lightMode}
+          darkMode={this.state.darkMode}
+          isColor={this.toggleColorMode}
+          clickMe={this.toggleModal}
+          handleData={hornedBeastData}
+        />
         <SelectedBeast
+          className={this.toggleColorMode}
           title={this.state.selectedTitle}
           description={this.state.selectedDescription}
           img={this.state.selectedImage}
@@ -40,7 +60,13 @@ class App extends React.Component {
           preview={this.state.preview}
           toggleModal={this.toggleModal}
         />
-        <Footer />
+        <Footer
+          whichColor={this.state.whichColor}
+          lightMode={this.state.lightMode}
+          darkMode={this.state.darkMode}
+          isColor={this.toggleColorMode}
+          className={this.toggleColorMode}
+        />
       </>
     );
   }
