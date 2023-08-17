@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import hornedBeastData from './assets/data.json';
 import SelectedBeast from './components/SelectedBeast';
-// import Search from './components/Search';
 
 class App extends React.Component {
   constructor(props) {
