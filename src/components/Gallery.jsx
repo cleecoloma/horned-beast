@@ -8,7 +8,16 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          backgroundColor: this.props.whichColor
+            ? this.props.lightMode
+            : this.props.darkMode,
+          color: this.props.whichColor
+            ? this.props.darkMode
+            : this.props.lightMode,
+        }}
+      >
         {this.props.handleData.map((item, _id) => (
           <HornedBeast
             key={_id}
