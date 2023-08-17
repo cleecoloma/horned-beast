@@ -45,6 +45,9 @@ class HornedBeast extends React.Component {
           <Card.Text style={{ height: '5rem' }}>
             {this.props.description}
           </Card.Text>
+          <Card.Text style={{ height: '1rem' }}>
+            Number of Horns: {this.props.horns}
+          </Card.Text>
           <Card.Text>
             <HeartFill /> {this.state.favoriteCount}
           </Card.Text>

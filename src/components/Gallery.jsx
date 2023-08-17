@@ -8,17 +8,25 @@ class Gallery extends React.Component {
     super(props);
     this.state = {
       horns: 0,
+      data: this.props.handleData,
+      newData: this.props.handleData,
     };
   }
 
-  updateBeastData = (value) => {
+  filterData = () => {
+    const updatedData = this.state.data.filter((beast) => beast.horns >= this.state.horns);
+    this.setState({ newData : updatedData })
+  }
+
+  updateHorn = (value) => {
     this.setState({ horns: value });
+    this.filterData();
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
     let parsedInput = parseInt(event.target.quantity.value);
-    this.updateBeastData(parsedInput);
+    this.updateHorn(parsedInput);
   };
 
   render() {
@@ -51,17 +59,22 @@ class Gallery extends React.Component {
               name="quantity"
             />
           </Form.Group>
-          <Button style={{margin: '1rem 0'}} variant="secondary" type="submit">
+          <Button
+            style={{ margin: '1rem 0' }}
+            variant="secondary"
+            type="submit"
+          >
             Submit
           </Button>
         </Form>
-        {this.props.handleData.map((item, _id) => (
+        {this.state.newData.map((item, _id) => (
           <HornedBeast
             key={_id}
             title={item.title}
             image_url={item.image_url}
             keyword={item.keyword}
             description={item.description}
+            horns={item.horns}
             clickMe={this.props.clickMe}
           />
         ))}
