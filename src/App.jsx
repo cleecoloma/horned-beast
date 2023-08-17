@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import hornedBeastData from './assets/data.json';
 import SelectedBeast from './components/SelectedBeast';
+// import Search from './components/Search';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class App extends React.Component {
       selectedImage: null,
       selectedFavorites: null,
       whichColor: false,
-      lightMode: 'white',
+      lightMode: '#F1F0E8', //gray
       darkMode: 'black',
     };
   }
