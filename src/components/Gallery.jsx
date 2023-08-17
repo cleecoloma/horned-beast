@@ -19,8 +19,9 @@ class Gallery extends React.Component {
   }
 
   updateHorn = (value) => {
-    this.setState({ horns: value });
-    this.filterData();
+    this.setState({ horns: value }, () => {
+      this.filterData();
+    });
   };
 
   handleSubmit = (event) => {
